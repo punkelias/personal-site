@@ -1,4 +1,4 @@
-import styles from "./Contact.module.css";
+import styles from './Contact.module.css'
 
 export default function Contact() {
   return (
@@ -65,5 +65,5 @@ export default function Contact() {
         </div>
       </div>
     </section>
-  );
+  )
 }

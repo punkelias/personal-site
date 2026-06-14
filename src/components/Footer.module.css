@@ -13,6 +13,11 @@
 }
 
 @media (max-width: 480px) {
-  .footer { padding: 1.5rem 1.25rem; }
-  .inner { flex-direction: column; gap: 4px; }
+  .footer {
+    padding: 1.5rem 1.25rem;
+  }
+  .inner {
+    flex-direction: column;
+    gap: 4px;
+  }
 }

@@ -1,53 +1,53 @@
-import styles from "./About.module.css";
+import styles from './About.module.css'
 
 const SKILLS = [
   {
-    group: "Frontend",
+    group: 'Frontend',
     items: [
-      "React",
-      "Vite",
-      "TypeScript",
-      "JavaScript",
-      "Tailwind CSS",
-      "Redux",
-      "HTML5",
-      "CSS3",
-      "Bootstrap",
-      "Material UI",
-      "Ant Design",
+      'React',
+      'Vite',
+      'TypeScript',
+      'JavaScript',
+      'Tailwind CSS',
+      'Redux',
+      'HTML5',
+      'CSS3',
+      'Bootstrap',
+      'Material UI',
+      'Ant Design',
     ],
   },
-  { group: "Mobile", items: ["React Native", "Expo", "iOS", "Android"] },
+  { group: 'Mobile', items: ['React Native', 'Expo', 'iOS', 'Android'] },
   {
-    group: "Backend",
+    group: 'Backend',
     items: [
-      "Node.js",
-      "Firebase",
-      "Firestore",
-      "Cloud Functions",
-      "PostgreSQL",
-      "REST APIs",
-      "MySQl",
-      "WebSockets",
+      'Node.js',
+      'Firebase',
+      'Firestore',
+      'Cloud Functions',
+      'PostgreSQL',
+      'REST APIs',
+      'MySQl',
+      'WebSockets',
     ],
   },
   {
-    group: "Tools",
+    group: 'Tools',
     items: [
-      "Git",
-      "CI/CD",
-      "Figma",
-      "Prettier",
-      "ESLint",
-      "Storybook",
-      "Docker",
-      "Terraform",
+      'Git',
+      'CI/CD',
+      'Figma',
+      'Prettier',
+      'ESLint',
+      'Storybook',
+      'Docker',
+      'Terraform',
     ],
   },
-  { group: "AI", items: ["Cursor", "Claude", "OpenAI"] },
-  { group: "Other", items: ["a11y", "Firebase Auth", "Push Notifications"] },
-  { group: "Languages", items: ["English", "Spanish"] },
-];
+  { group: 'AI', items: ['Cursor', 'Claude', 'OpenAI'] },
+  { group: 'Other', items: ['a11y', 'Firebase Auth', 'Push Notifications'] },
+  { group: 'Languages', items: ['English', 'Spanish'] },
+]
 
 export default function About() {
   return (
@@ -98,5 +98,5 @@ export default function About() {
         </div>
       </div>
     </section>
-  );
+  )
 }

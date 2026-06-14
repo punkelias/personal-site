@@ -1,23 +1,25 @@
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 :root {
-  --bg-base: #0D0F14;
-  --bg-surface: #13161D;
-  --bg-elevated: #1A1E28;
+  --bg-base: #0d0f14;
+  --bg-surface: #13161d;
+  --bg-elevated: #1a1e28;
   --border: rgba(255, 255, 255, 0.07);
   --border-hover: rgba(255, 255, 255, 0.14);
-  --accent: #4F8EF7;
+  --accent: #4f8ef7;
   --accent-dim: rgba(79, 142, 247, 0.12);
   --accent-glow: rgba(79, 142, 247, 0.25);
-  --text-primary: #F0F2F7;
-  --text-secondary: #8891A8;
-  --text-tertiary: #4E5567;
-  --success: #3DD68C;
-  --warning: #F5A623;
+  --text-primary: #f0f2f7;
+  --text-secondary: #8891a8;
+  --text-tertiary: #4e5567;
+  --success: #3dd68c;
+  --warning: #f5a623;
   --font-sans: 'Inter', system-ui, sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
   --radius-sm: 6px;
@@ -54,7 +56,9 @@ a {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
+  *,
+  *::before,
+  *::after {
     animation-duration: 0.01ms !important;
     transition-duration: 0.01ms !important;
   }
