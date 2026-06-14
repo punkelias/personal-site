@@ -1,13 +1,52 @@
 import styles from "./About.module.css";
 
 const SKILLS = [
+  {
+    group: "Frontend",
+    items: [
+      "React",
+      "Vite",
+      "TypeScript",
+      "JavaScript",
+      "Tailwind CSS",
+      "Redux",
+      "HTML5",
+      "CSS3",
+      "Bootstrap",
+      "Material UI",
+      "Ant Design",
+    ],
+  },
   { group: "Mobile", items: ["React Native", "Expo", "iOS", "Android"] },
   {
     group: "Backend",
-    items: ["Firebase", "Firestore", "Cloud Functions", "Elixir"],
+    items: [
+      "Node.js",
+      "Firebase",
+      "Firestore",
+      "Cloud Functions",
+      "PostgreSQL",
+      "REST APIs",
+      "MySQl",
+      "WebSockets",
+    ],
   },
-  { group: "Frontend", items: ["React", "Vite", "TypeScript", "JavaScript"] },
-  { group: "Tools", items: ["Git", "VS Code", "Figma", "Cursor"] },
+  {
+    group: "Tools",
+    items: [
+      "Git",
+      "CI/CD",
+      "Figma",
+      "Prettier",
+      "ESLint",
+      "Storybook",
+      "Docker",
+      "Terraform",
+    ],
+  },
+  { group: "AI", items: ["Cursor", "Claude", "OpenAI"] },
+  { group: "Other", items: ["a11y", "Firebase Auth", "Push Notifications"] },
+  { group: "Languages", items: ["English", "Spanish"] },
 ];
 
 export default function About() {
