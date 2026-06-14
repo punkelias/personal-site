@@ -28,13 +28,39 @@
   letter-spacing: -0.02em;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+.scroller {
+  display: flex;
   gap: 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding-bottom: 1rem;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+}
+
+.scroller::-webkit-scrollbar {
+  height: 8px;
+}
+
+.scroller::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scroller::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 999px;
+  transition: background 0.2s ease;
+}
+
+.scroller:hover::-webkit-scrollbar-thumb {
+  background: var(--border-hover);
 }
 
 .card {
+  flex: 0 0 clamp(240px, 80%, 300px);
+  scroll-snap-align: start;
   background: var(--bg-surface);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
@@ -42,11 +68,16 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
-  transition: border-color 0.2s ease;
+  transition:
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .card:hover {
   border-color: var(--border-hover);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.18);
 }
 
 .cardTop {
@@ -127,11 +158,27 @@
   white-space: nowrap;
 }
 
+.appNameWrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 @media (max-width: 600px) {
   .section {
     padding: 3.5rem 1.25rem;
   }
-  .grid {
-    grid-template-columns: 1fr;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroller {
+    scroll-behavior: auto;
+  }
+  .card {
+    transition: border-color 0.2s ease;
+  }
+  .card:hover {
+    transform: none;
+    box-shadow: none;
   }
 }
