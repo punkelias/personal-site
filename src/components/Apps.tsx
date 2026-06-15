@@ -1,5 +1,4 @@
 import { SUCCESS_COLOR, WARNING_COLOR } from '../constants'
-import styles from './Apps.module.css'
 
 const APPS = [
   {
@@ -62,23 +61,33 @@ const APPS = [
 
 export default function Apps() {
   return (
-    <section className={styles.section} id="apps">
-      <div className={styles.container}>
-        <div className={styles.sectionHeader}>
-          <span className={styles.label}>Apps</span>
-          <h2 className={styles.heading}>Personal Projects</h2>
+    <section
+      className="px-8 py-20 max-[600px]:px-5 max-[600px]:py-14"
+      id="apps"
+    >
+      <div className="mx-auto max-w-[900px]">
+        <div className="mb-10">
+          <span className="mb-2 inline-block text-[11px] font-semibold tracking-[0.1em] text-accent uppercase">
+            Apps
+          </span>
+          <h2 className="text-[28px] font-medium tracking-[-0.02em] text-primary">
+            Personal Projects
+          </h2>
         </div>
 
-        <div className={styles.scroller}>
+        <div className="scrollbar-custom flex snap-x snap-mandatory gap-4 overflow-x-auto scroll-smooth pb-4">
           {APPS.map((app) => (
-            <article key={app.id} className={styles.card}>
-              <div className={styles.cardTop}>
+            <article
+              key={app.id}
+              className="flex flex-[0_0_clamp(240px,80%,300px)] snap-start flex-col gap-2.5 rounded-lg border border-border bg-surface p-6 transition duration-200 hover:-translate-y-1 hover:border-border-hover hover:shadow-[0_12px_24px_rgba(0,0,0,0.18)]"
+            >
+              <div className="mb-1 flex items-center justify-between">
                 <div
-                  className={styles.iconWrap}
+                  className="flex h-11 w-11 items-center justify-center rounded-md"
                   style={{ background: app.colorDim }}
                 >
                   <span
-                    className={styles.icon}
+                    className="text-[22px] leading-none"
                     role="img"
                     aria-label={app.name}
                   >
@@ -86,7 +95,7 @@ export default function Apps() {
                   </span>
                 </div>
                 <span
-                  className={styles.status}
+                  className="rounded-full px-2.5 py-[3px] text-[11px] font-medium"
                   style={{
                     color:
                       app.status === 'live' ? SUCCESS_COLOR : WARNING_COLOR,
@@ -100,17 +109,28 @@ export default function Apps() {
                   {app.statusLabel}
                 </span>
               </div>
-              <div className={styles.appNameWrap}>
-                <h3 className={styles.appName}>{app.name}</h3>
-                <span className={styles.platform}>{app.platform}</span>
+              <div className="flex items-center justify-between">
+                <h3 className="text-[17px] font-medium text-primary">
+                  {app.name}
+                </h3>
+                <span className="text-[11px] whitespace-nowrap text-tertiary">
+                  {app.platform}
+                </span>
               </div>
-              <p className={styles.appTagline}>{app.tagline}</p>
-              <p className={styles.appDesc}>{app.description}</p>
+              <p className="text-[13px] font-normal text-accent">
+                {app.tagline}
+              </p>
+              <p className="flex-1 text-[13px] leading-[1.65] text-secondary">
+                {app.description}
+              </p>
 
-              <div className={styles.cardFooter}>
-                <div className={styles.techList}>
+              <div className="mt-2 flex items-center justify-between border-t border-border pt-3.5">
+                <div className="flex flex-wrap gap-1.5">
                   {app.tech.map((t) => (
-                    <span key={t} className={styles.tech}>
+                    <span
+                      key={t}
+                      className="rounded-[4px] border border-border bg-elevated px-2 py-0.5 font-mono text-[10px] text-tertiary"
+                    >
                       {t}
                     </span>
                   ))}

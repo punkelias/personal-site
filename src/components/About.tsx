@@ -1,5 +1,3 @@
-import styles from './About.module.css'
-
 const SKILLS = [
   {
     group: 'Frontend',
@@ -51,15 +49,22 @@ const SKILLS = [
 
 export default function About() {
   return (
-    <section className={styles.section} id="about">
-      <div className={styles.container}>
-        <div className={styles.sectionHeader}>
-          <span className={styles.label}>About</span>
-          <h2 className={styles.heading}>Who I am</h2>
+    <section
+      className="border-t border-border px-8 py-20 max-[700px]:px-5 max-[700px]:py-14"
+      id="about"
+    >
+      <div className="mx-auto max-w-[900px]">
+        <div className="mb-10">
+          <span className="mb-2 inline-block text-[11px] font-semibold tracking-[0.1em] text-accent uppercase">
+            About
+          </span>
+          <h2 className="text-[28px] font-medium tracking-[-0.02em] text-primary">
+            Who I am
+          </h2>
         </div>
 
-        <div className={styles.layout}>
-          <div className={styles.bio}>
+        <div className="grid grid-cols-2 items-start gap-12 max-[700px]:grid-cols-1 max-[700px]:gap-8">
+          <div className="flex flex-col gap-4 [&>p]:text-[15px] [&>p]:leading-[1.75] [&>p]:font-light [&>p]:text-secondary">
             <p>
               Hi, I'm Elias, a senior software developer with experience
               building web and mobile applications using technologies like
@@ -81,13 +86,18 @@ export default function About() {
             </p>
           </div>
 
-          <div className={styles.skillsWrap}>
+          <div className="flex flex-col gap-5">
             {SKILLS.map(({ group, items }) => (
-              <div key={group} className={styles.skillGroup}>
-                <span className={styles.groupLabel}>{group}</span>
-                <div className={styles.skillItems}>
+              <div key={group} className="flex flex-col gap-2">
+                <span className="text-[11px] font-semibold tracking-[0.08em] text-tertiary uppercase">
+                  {group}
+                </span>
+                <div className="flex flex-wrap gap-1.5">
                   {items.map((item) => (
-                    <span key={item} className={styles.skill}>
+                    <span
+                      key={item}
+                      className="rounded-sm border border-border bg-surface px-2.5 py-1 font-mono text-[12px] text-secondary"
+                    >
                       {item}
                     </span>
                   ))}
