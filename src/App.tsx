@@ -1,23 +1,19 @@
-import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import Apps from './components/Apps'
-import About from './components/About'
-import Contact from './components/Contact'
-import Footer from './components/Footer'
+import { Routes, Route } from 'react-router-dom'
 import ParticleField from './components/ParticleField'
+import Home from './pages/Home'
+import PrivacyPolicy from './pages/PrivacyPolicy'
 
 export default function App() {
   return (
     <>
       <ParticleField />
-      <Navbar />
-      <main>
-        <Hero />
-        <Apps />
-        <About />
-        <Contact />
-      </main>
-      <Footer />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route
+          path="/privacy-policy/football-pool-app"
+          element={<PrivacyPolicy />}
+        />
+      </Routes>
     </>
   )
 }
