@@ -50,7 +50,7 @@ const SKILLS = [
 export default function About() {
   return (
     <section
-      className="border-t border-border px-8 py-20 max-[700px]:px-5 max-[700px]:py-14"
+      className="border-t border-border px-8 py-20 max-md:px-5 max-md:py-14"
       id="about"
     >
       <div className="mx-auto max-w-[900px]">
@@ -63,7 +63,7 @@ export default function About() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-2 items-start gap-12 max-[700px]:grid-cols-1 max-[700px]:gap-8">
+        <div className="grid grid-cols-2 items-start gap-12 max-md:grid-cols-1 max-md:gap-8">
           <div className="flex flex-col gap-4 [&>p]:text-[15px] [&>p]:leading-[1.75] [&>p]:font-light [&>p]:text-secondary">
             <p>
               Hi, I'm Elias, a senior software developer with experience

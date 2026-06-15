@@ -25,10 +25,10 @@ export default function Hero() {
   }, [])
 
   return (
-    <section className="relative flex min-h-screen items-center justify-center border-b border-border px-8 pt-24 pb-16 max-[600px]:px-5 max-[600px]:pt-20 max-[600px]:pb-12">
+    <section className="relative flex min-h-screen items-center justify-center overflow-x-clip border-b border-border px-8 pt-24 pb-16 max-sm:px-5 max-sm:pt-20 max-sm:pb-12">
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute top-0 left-1/2 h-[400px] w-[600px] -translate-x-1/2 bg-[radial-gradient(ellipse_at_center_top,rgba(79,142,247,0.08)_0%,transparent_70%)]"
+        className="pointer-events-none absolute top-0 left-1/2 h-[400px] w-[600px] max-w-full -translate-x-1/2 bg-[radial-gradient(ellipse_at_center_top,rgba(79,142,247,0.08)_0%,transparent_70%)]"
       />
       <div className="relative z-10 w-full max-w-[640px] text-center">
         <h1 className="mb-2 text-[clamp(48px,8vw,80px)] leading-none font-semibold tracking-[-0.03em] text-primary">
@@ -59,7 +59,7 @@ export default function Hero() {
               profile.js
             </span>
           </div>
-          <pre className="min-h-[140px] overflow-x-auto px-6 py-5 font-mono text-[13px] leading-[1.8] whitespace-pre text-accent max-[600px]:p-4 max-[600px]:text-[11px]">
+          <pre className="min-h-[140px] overflow-x-auto px-6 py-5 font-mono text-[13px] leading-[1.8] whitespace-pre text-accent max-sm:p-4 max-sm:text-[11px]">
             <code>
               {displayed}
               <span

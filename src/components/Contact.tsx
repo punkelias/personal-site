@@ -1,7 +1,7 @@
 export default function Contact() {
   return (
     <section
-      className="border-t border-border px-8 pt-20 pb-24 max-[600px]:px-5 max-[600px]:pt-14 max-[600px]:pb-16"
+      className="border-t border-border px-8 pt-20 pb-24 max-sm:px-5 max-sm:pt-14 max-sm:pb-16"
       id="contact"
     >
       <div className="mx-auto max-w-[900px]">
@@ -14,7 +14,7 @@ export default function Contact() {
           </h2>
         </div>
 
-        <div className="max-w-[520px] rounded-lg border border-border bg-surface p-8 max-[600px]:p-6">
+        <div className="max-w-[520px] rounded-lg border border-border bg-surface p-8 max-sm:p-6">
           <p className="mb-7 text-[14px] leading-[1.7] font-light text-secondary">
             Whether it's a project, a collaboration, or just to say hi, reach
             out and I'll get back to you.

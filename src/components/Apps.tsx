@@ -30,6 +30,20 @@ const APPS = [
     tech: ['Java', 'Objective-C'],
   },
   {
+    id: 'pediatric-parent-guide',
+    name: 'Pediatric Parent Guide',
+    tagline: 'Pediatric tips and guidance for parents',
+    description:
+      'A mobile-first app created for a pediatric clinic, designed to share helpful health tips, parenting guidance, clinic updates, and pediatric news with parents. The goal is to provide clear, practical, and trustworthy educational content in one easy-to-access place.',
+    platform: 'Mobile / Web',
+    status: 'dev',
+    statusLabel: 'In development',
+    icon: '🩺',
+    color: '#FF8A8A',
+    colorDim: 'rgba(255,138,138,0.1)',
+    tech: ['React Native', 'Expo', 'TypeScript', 'Firebase'],
+  },
+  {
     id: 'personal-website',
     name: 'Personal Website',
     tagline: 'My personal website',
@@ -61,10 +75,7 @@ const APPS = [
 
 export default function Apps() {
   return (
-    <section
-      className="px-8 py-20 max-[600px]:px-5 max-[600px]:py-14"
-      id="apps"
-    >
+    <section className="px-8 py-20 max-sm:px-5 max-sm:py-14" id="apps">
       <div className="mx-auto max-w-[900px]">
         <div className="mb-10">
           <span className="mb-2 inline-block text-[11px] font-semibold tracking-[0.1em] text-accent uppercase">

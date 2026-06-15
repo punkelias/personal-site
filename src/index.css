@@ -66,6 +66,44 @@
 }
 
 @layer utilities {
+  /* Drifting "dust" particle field rendered with box-shadow dots (see ParticleField.tsx).
+     A ::after clone offset by --star-travel makes the upward drift loop seamlessly. */
+  .particles {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    overflow: hidden;
+    pointer-events: none;
+  }
+
+  .particle-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: var(--star-size);
+    height: var(--star-size);
+    border-radius: 50%;
+    background: transparent;
+    box-shadow: var(--star-shadow);
+    animation:
+      drift var(--star-duration) linear var(--drift-delay, 0s) infinite,
+      twinkle var(--twinkle-duration, 6s) ease-in-out var(--twinkle-delay, 0s)
+        infinite;
+    will-change: transform, opacity;
+  }
+
+  .particle-layer::after {
+    content: '';
+    position: absolute;
+    top: var(--star-travel);
+    left: 0;
+    width: var(--star-size);
+    height: var(--star-size);
+    border-radius: 50%;
+    background: transparent;
+    box-shadow: var(--star-shadow);
+  }
+
   .scrollbar-custom {
     scrollbar-width: thin;
     scrollbar-color: var(--color-border) transparent;
@@ -90,11 +128,35 @@
   }
 }
 
+@keyframes drift {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(calc(-1 * var(--star-travel)));
+  }
+}
+
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
   *::after {
     animation-duration: 0.01ms !important;
     transition-duration: 0.01ms !important;
+  }
+
+  /* Keep a static dust field rather than strobing the infinite drift. */
+  .particle-layer {
+    animation: none !important;
   }
 }
