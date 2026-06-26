@@ -12,7 +12,6 @@ export default function Footer() {
           >
             Privacy Policy
           </Link>
-          <span>Built with React + Vite</span>
         </div>
       </div>
     </footer>

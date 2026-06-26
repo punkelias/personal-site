@@ -2,6 +2,7 @@ import { Routes, Route } from 'react-router-dom'
 import ParticleField from './components/ParticleField'
 import Home from './pages/Home'
 import PrivacyPolicy from './pages/PrivacyPolicy'
+import NotFound from './pages/NotFound'
 
 export default function App() {
   return (
@@ -13,6 +14,7 @@ export default function App() {
           path="/privacy-policy/football-pool-app"
           element={<PrivacyPolicy />}
         />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </>
   )
